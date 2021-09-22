@@ -4,5 +4,27 @@
 		<AssemblyName>MontyHallProblemSimulation.Infrastructure.Simulation.Grpc.Comm</AssemblyName>
 		<RootNamespace>MontyHallProblemSimulation.Infrastructure.Simulation.Grpc.Comm</RootNamespace>
 	</PropertyGroup>
+	<ItemGroup>
+	  <PackageReference Include="Google.Protobuf" Version="3.13.0" />
+	  <PackageReference Include="Grpc.Net.ClientFactory" Version="2.32.0" />
+	  <PackageReference Include="Grpc.Tools" Version="2.32.0">
+	    <PrivateAssets>all</PrivateAssets>
+	    <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+	  </PackageReference>
+	</ItemGroup>
+	<ItemGroup>
+	  <ProjectReference Include="..\Core\Core.csproj" />
+	</ItemGroup>
+	<ItemGroup>
+	  <Protobuf Include="..\External\Protos\notificationEvent.proto" GrpcServices="Client">
+	    <Link>Protos\notificationEvent.proto</Link>
+	  </Protobuf>
+	  <Protobuf Include="..\Protos\simulationCommand.proto" GrpcServices="Client">
+	    <Link>Protos\simulationCommand.proto</Link>
+	  </Protobuf>
+	  <Protobuf Include="..\Protos\simulationEvent.proto" GrpcServices="Client">
+	    <Link>Protos\simulationEvent.proto</Link>
+	  </Protobuf>
+	</ItemGroup>
 
 </Project>

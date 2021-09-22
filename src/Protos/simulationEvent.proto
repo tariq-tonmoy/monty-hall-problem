@@ -4,7 +4,7 @@ option csharp_namespace = "MontyHallProblemSimulation.Application.Protos";
 
 import "google/protobuf/empty.proto";
 
-service ShipEvent {
+service SimulationEvent {
   rpc ApplyEvent (EventModel) returns (google.protobuf.Empty);
 }
 

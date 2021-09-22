@@ -44,8 +44,7 @@ namespace MontyHallProblemSimulation.External.NotificationHost
                     });
                 });
 
-                webBuilder
-                    .UseStartup<Startup>();
+                webBuilder.UseStartup<Startup>();
             });
     }
 }

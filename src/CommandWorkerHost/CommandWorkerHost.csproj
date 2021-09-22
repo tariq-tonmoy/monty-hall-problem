@@ -11,4 +11,16 @@
 		<PackageReference Include="Grpc.AspNetCore" Version="2.34.0" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <ProjectReference Include="..\Core\Core.csproj" />
+	  <ProjectReference Include="..\Grpc.Comm\Grpc.Comm.csproj" />
+	  <ProjectReference Include="..\Utility\Utility.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Protobuf Include="..\Protos\simulationCommand.proto" GrpcServices="Server">
+	    <Link>Protos\simulationCommand.proto</Link>
+	  </Protobuf>
+	</ItemGroup>
+
 </Project>

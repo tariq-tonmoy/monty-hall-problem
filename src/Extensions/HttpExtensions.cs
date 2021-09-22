@@ -41,9 +41,6 @@ namespace MontyHallProblemSimulation.Infrastructure.Extensions
                    .AllowCredentials()
                    .SetPreflightMaxAge(TimeSpan.FromDays(365)));
 
-            applicationBuilder.UseAuthentication();
-            applicationBuilder.UseAuthorization();
-
             applicationBuilder.UseEndpoints(endpoints =>
             {
 

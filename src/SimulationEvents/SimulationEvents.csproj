@@ -1,9 +1,13 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
 		<TargetFramework>net5.0</TargetFramework>
 		<AssemblyName>MontyHallProblemSimulation.Domain.SimulationEvents</AssemblyName>
 		<RootNamespace>MontyHallProblemSimulation.Domain.SimulationEvents</RootNamespace>
 	</PropertyGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\Core\Core.csproj" />
+	</ItemGroup>
 
 </Project>
