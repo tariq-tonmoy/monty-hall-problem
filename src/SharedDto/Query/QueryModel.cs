@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace MontyHallProblemSimulation.ReadSide.QueryWebHost.Models
+namespace MontyHallProblemSimulation.Shared.SharedDto.Query
 {
     [BindProperties(SupportsGet = true)]
     public class QueryModel

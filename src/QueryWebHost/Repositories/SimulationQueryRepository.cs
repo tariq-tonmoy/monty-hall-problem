@@ -1,8 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using MontyHallProblemSimulation.Infrastructure.Simulation.Cqrs.Repository.Sqlite;
 using MontyHallProblemSimulation.ReadSide.QueryWebHost.Abstractions;
-using MontyHallProblemSimulation.ReadSide.QueryWebHost.Models;
 using MontyHallProblemSimulation.ReadSide.ViewModel;
+using MontyHallProblemSimulation.Shared.SharedDto.Query;
 using System.Linq;
 
 namespace MontyHallProblemSimulation.ReadSide.QueryWebHost.Repositories
@@ -30,7 +30,7 @@ namespace MontyHallProblemSimulation.ReadSide.QueryWebHost.Repositories
             }
 
             response.Responses = this.dbContext.Set<SimulationViewModel>()
-                                     .OrderBy(x => x.LastUpdatedDate)
+                                     .OrderByDescending(x => x.LastUpdatedDate)
                                      .Skip(query.PageIndex * query.PageSize)
                                      .Take(query.PageSize)
                                      .Select(x => new QueryResponse()

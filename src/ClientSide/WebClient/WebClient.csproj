@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net5.0</TargetFramework>
+		<AssemblyName>MontyHallProblemSimulation.ClientSide.WebClient</AssemblyName>
+		<RootNamespace>MontyHallProblemSimulation.ClientSide.WebClient</RootNamespace>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\..\SharedDto\SharedDto.csproj" />
+	</ItemGroup>
+
+</Project>

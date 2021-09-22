@@ -1,0 +1,19 @@
+﻿<Window x:Class="FrontEndClient.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FrontEndClient"
+        mc:Ignorable="d"
+        Title="Monty-Hall" Height="450" Width="800">
+    <Grid>
+        <Grid Height="30"  VerticalAlignment="Top" Background="WhiteSmoke">
+            <Grid>
+                <TextBlock Text="Month-Hall Problem Simulation" Padding="4"/>
+            </Grid>
+            <Grid Width="200" HorizontalAlignment="Right">
+
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>

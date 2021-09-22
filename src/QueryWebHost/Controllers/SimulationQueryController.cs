@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using MontyHallProblemSimulation.ReadSide.QueryWebHost.Abstractions;
-using MontyHallProblemSimulation.ReadSide.QueryWebHost.Models;
+using MontyHallProblemSimulation.Shared.SharedDto.Query;
 
 namespace MontyHallProblemSimulation.ReadSide.QueryWebHost.Controllers
 {

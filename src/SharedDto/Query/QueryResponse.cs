@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
-namespace MontyHallProblemSimulation.ReadSide.QueryWebHost.Models
+namespace MontyHallProblemSimulation.Shared.SharedDto.Query
 {
     public class QueryResponse
     {
