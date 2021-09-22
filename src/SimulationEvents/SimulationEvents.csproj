@@ -1,0 +1,9 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net5.0</TargetFramework>
+		<AssemblyName>MontyHallProblemSimulation.Domain.SimulationEvents</AssemblyName>
+		<RootNamespace>MontyHallProblemSimulation.Domain.SimulationEvents</RootNamespace>
+	</PropertyGroup>
+
+</Project>

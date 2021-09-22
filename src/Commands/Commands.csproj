@@ -1,0 +1,9 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net5.0</TargetFramework>
+		<AssemblyName>MontyHallProblemSimulation.Application.Commands</AssemblyName>
+		<RootNamespace>MontyHallProblemSimulation.Application.Commands</RootNamespace>
+	</PropertyGroup>
+
+</Project>

@@ -1,0 +1,9 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net5.0</TargetFramework>
+		<AssemblyName>MontyHallProblemSimulation.Infrastructure.Extensions</AssemblyName>
+		<RootNamespace>MontyHallProblemSimulation.Infrastructure.Extensions</RootNamespace>
+	</PropertyGroup>
+
+</Project>

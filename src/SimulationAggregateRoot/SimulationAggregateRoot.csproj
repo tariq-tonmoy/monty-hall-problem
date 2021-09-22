@@ -1,0 +1,9 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net5.0</TargetFramework>
+		<AssemblyName>MontyHallProblemSimulation.Domain.SimulationAggregateRoot</AssemblyName>
+		<RootNamespace>MontyHallProblemSimulation.Domain.SimulationAggregateRoot</RootNamespace>
+	</PropertyGroup>
+
+</Project>
