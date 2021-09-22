@@ -21,7 +21,7 @@ namespace MontyHallProblemSimulation.Application.CommandWebHost.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> CreateSimulation([FromBody] CreateSimulationCommand command)
+        public async Task<IActionResult> CreateSimulations([FromBody] CreateSimulationsCommand command)
         {
             await this.client.PublishMessageAsync(command);
             return this.Accepted();

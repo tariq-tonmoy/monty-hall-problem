@@ -9,9 +9,9 @@ using System.Threading.Tasks;
 
 namespace MontyHallProblemSimulation.Application.CommandHandlers
 {
-    public class DeactivateSimulationCommandHandler : IAsyncCommandHandler<DeactivateSimulationCommand>
+    public class RerunSimulationsCommandHandler : IAsyncCommandHandler<RerunSimulationsCommand>
     {
-        public Task<CommandRespose> HandleAsync(DeactivateSimulationCommand command)
+        public Task<CommandRespose> HandleAsync(RerunSimulationsCommand command)
         {
             throw new NotImplementedException();
         }

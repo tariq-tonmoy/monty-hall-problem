@@ -1,6 +1,6 @@
 {
   "profiles": {
-    "ShipQueryHost": {
+    "SimulationQueryHost": {
       "commandName": "Project",
       "launchBrowser": false,
       "environmentVariables": {
