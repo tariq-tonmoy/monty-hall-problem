@@ -11,11 +11,11 @@ using System.Threading.Tasks;
 
 namespace MontyHallProblemSimulation.Domain.DomainService.Service.Imps
 {
-    internal class RandomNumberGeneratorService : IRandomNumberGeneratorService
+    public class RandomNumberGeneratorService : IRandomNumberGeneratorService
     {
         private readonly IDateTimeProvider dateTimeProvider;
 
-        internal RandomNumberGeneratorService(IDateTimeProvider dateTimeProvider)
+        public RandomNumberGeneratorService(IDateTimeProvider dateTimeProvider)
         {
             this.dateTimeProvider = dateTimeProvider;
         }

@@ -1,6 +1,6 @@
 ﻿namespace MontyHallProblemSimulation.Domain.DomainService.DataModels
 {
-    internal enum PayloadState
+    public enum PayloadState
     {
         GOAT,
         CAR,

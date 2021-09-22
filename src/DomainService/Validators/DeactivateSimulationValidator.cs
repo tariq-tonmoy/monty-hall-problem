@@ -12,7 +12,7 @@ namespace MontyHallProblemSimulation.Domain.DomainService.Validators
         public DeactivateSimulationValidator(TAggregateRoot aggregateRoot, Guid sessionId, string actionName, string serviceName)
         {
             this.RuleFor(x => x.SimulationId)
-                    .Must(shipId => aggregateRoot.IsMarkedToDelete == true)
+                    .Must(simulationId => aggregateRoot.IsMarkedToDelete == false)
                     .WithState(dto => new BusinessRuleViolationEventMessage(
                         EventMessageType.FAILED,
                         SimulationBusinessRuleViolationCodes.SimulationIsAlreadyDeactivated,

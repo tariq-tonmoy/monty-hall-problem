@@ -7,7 +7,7 @@ using System.Reflection;
 
 namespace MontyHallProblemSimulation.Shared.Utility
 {
-    internal class IncludePrivateStateContractResolver : DefaultContractResolver
+    public class IncludePrivateStateContractResolver : DefaultContractResolver
     {
         protected override List<MemberInfo> GetSerializableMembers(Type objectType)
         {

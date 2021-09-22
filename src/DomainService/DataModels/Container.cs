@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace MontyHallProblemSimulation.Domain.DomainService.DataModels
 {
-    internal class Container
+    public class Container
     {
-        internal List<ContainerState> ContainerStates { get; set; }
+        public List<ContainerState> ContainerStates { get; set; }
     }
 }

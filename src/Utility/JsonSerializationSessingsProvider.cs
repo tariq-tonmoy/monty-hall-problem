@@ -2,7 +2,7 @@
 
 namespace MontyHallProblemSimulation.Shared.Utility
 {
-    internal class JsonSerializationSessingsProvider
+    public class JsonSerializationSessingsProvider
     {
         public JsonSerializerSettings GetJsonSerializerSettingsForPrivateProperties()
         {

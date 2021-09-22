@@ -16,7 +16,7 @@ namespace MontyHallProblemSimulation.Domain.DomainService.Validators
         public RerunSimulationValidator(TAggregateRoot aggregateRoot, Guid sessionId, string actionName, string serviceName)
         {
             this.RuleFor(x => x.SimulationId)
-                .Must(shipId => aggregateRoot.IsMarkedToDelete == false)
+                .Must(simulationId => aggregateRoot.IsMarkedToDelete == false)
                 .WithState(dto => new BusinessRuleViolationEventMessage(
                     EventMessageType.FAILED,
                     SimulationBusinessRuleViolationCodes.SimulationDoesNotExists,

@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
 	<PropertyGroup>
 		<OutputType>Exe</OutputType>
@@ -6,5 +6,22 @@
 		<AssemblyName>MontyHallProblemSimulation.ReadSide.EventWorkerHost</AssemblyName>
 		<RootNamespace>MontyHallProblemSimulation.ReadSide.EventWorkerHost</RootNamespace>
 	</PropertyGroup>
+
+	<ItemGroup>
+	  <PackageReference Include="Grpc.AspNetCore" Version="2.32.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\Core\Core.csproj" />
+	  <ProjectReference Include="..\Cqrs.Repository.Sqlite\Cqrs.Repository.Sqlite.csproj" />
+	  <ProjectReference Include="..\EventHandlers\EventHandlers.csproj" />
+	  <ProjectReference Include="..\Simulation.Cqrs.Repository.Sqlite\Simulation.Cqrs.Repository.Sqlite.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Protobuf Include="..\Protos\simulationEvent.proto" GrpcServices="Server">
+	    <Link>Protos\simulationEvent.proto</Link>
+	  </Protobuf>
+	</ItemGroup>
 
 </Project>

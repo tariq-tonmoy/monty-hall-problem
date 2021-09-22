@@ -3,9 +3,6 @@ using Microsoft.AspNetCore.Mvc;
 using MontyHallProblemSimulation.Application.Commands;
 using MontyHallProblemSimulation.Application.Protos;
 using MontyHallProblemSimulation.Infrastructure.Core.Abstractions;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace MontyHallProblemSimulation.Application.CommandWebHost.Controllers
@@ -22,6 +19,20 @@ namespace MontyHallProblemSimulation.Application.CommandWebHost.Controllers
 
         [HttpPost]
         public async Task<IActionResult> CreateSimulations([FromBody] CreateSimulationsCommand command)
+        {
+            await this.client.PublishMessageAsync(command);
+            return this.Accepted();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> RerunSimulations([FromBody] RerunSimulationsCommand command)
+        {
+            await this.client.PublishMessageAsync(command);
+            return this.Accepted();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> DeactivateSimulations([FromBody] DeactivateSimulationsCommand command)
         {
             await this.client.PublishMessageAsync(command);
             return this.Accepted();

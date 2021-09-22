@@ -1,6 +1,6 @@
 ﻿namespace MontyHallProblemSimulation.Domain.DomainService.DataModels
 {
-    internal enum DoorState
+    public enum DoorState
     {
         NONE,
         OPENED,

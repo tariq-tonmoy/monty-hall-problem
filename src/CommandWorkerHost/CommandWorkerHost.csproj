@@ -12,8 +12,11 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <ProjectReference Include="..\CommandHandlers\CommandHandlers.csproj" />
 	  <ProjectReference Include="..\Core\Core.csproj" />
+	  <ProjectReference Include="..\Cqrs.Repository.Sqlite\Cqrs.Repository.Sqlite.csproj" />
 	  <ProjectReference Include="..\Grpc.Comm\Grpc.Comm.csproj" />
+	  <ProjectReference Include="..\Simulation.Cqrs.Repository.Sqlite\Simulation.Cqrs.Repository.Sqlite.csproj" />
 	  <ProjectReference Include="..\Utility\Utility.csproj" />
 	</ItemGroup>
 

@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace MontyHallProblemSimulation.Infrastructure.Cqrs.Repository.Sqlite
 {
-    internal class SqliteReadRepository<T, TDbContext> : IReadRepository<T>
+    public class SqliteReadRepository<T, TDbContext> : IReadRepository<T>
         where T : ViewModelBase
         where TDbContext : DbContext
     {

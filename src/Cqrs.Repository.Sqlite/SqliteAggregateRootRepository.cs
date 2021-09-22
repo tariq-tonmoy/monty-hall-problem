@@ -1,14 +1,12 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System;
 using System.Threading.Tasks;
-using System.Linq.Expressions;
 using System.Linq;
-using System.Collections.Generic;
 using MontyHallProblemSimulation.Infrastructure.Core;
 
 namespace MontyHallProblemSimulation.Infrastructure.Cqrs.Repository.Sqlite
 {
-    internal class SqliteAggregateRootRepository<T, TDbContext> : IAggregateRootRepository<T>
+    public class SqliteAggregateRootRepository<T, TDbContext> : IAggregateRootRepository<T>
         where T : AggregateRoot
         where TDbContext : DbContext
     {

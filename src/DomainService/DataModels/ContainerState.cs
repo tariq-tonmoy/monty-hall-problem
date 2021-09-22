@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MontyHallProblemSimulation.Domain.DomainService.DataModels
 {
-    internal class ContainerState
+    public class ContainerState
     {
         public DoorState StateOfDoor { get; set; }
 

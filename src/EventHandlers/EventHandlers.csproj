@@ -1,9 +1,15 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
 		<TargetFramework>net5.0</TargetFramework>
 		<AssemblyName>MontyHallProblemSimulation.ReadSide.EventHandlers</AssemblyName>
 		<RootNamespace>MontyHallProblemSimulation.ReadSide.EventHandlers</RootNamespace>
 	</PropertyGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\Cqrs.Repository\Cqrs.Repository.csproj" />
+	  <ProjectReference Include="..\SimulationEvents\SimulationEvents.csproj" />
+	  <ProjectReference Include="..\ViewModel\ViewModel.csproj" />
+	</ItemGroup>
 
 </Project>

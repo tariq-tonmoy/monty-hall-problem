@@ -3,7 +3,7 @@ using System;
 
 namespace MontyHallProblemSimulation.Shared.Utility
 {
-    internal class ReflectionUtilityProvider : IReflectionUtilityProvider
+    public class ReflectionUtilityProvider : IReflectionUtilityProvider
     {
         public string GetFullyQualifiedAssemblyName(Type type)
         {
