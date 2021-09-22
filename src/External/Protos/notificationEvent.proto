@@ -1,0 +1,14 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "MontyHallProblemSimulation.External.Protos";
+
+import "google/protobuf/empty.proto";
+
+service NotificationEvent {
+  rpc ApplyEvent (EventModel) returns (google.protobuf.Empty);
+}
+
+message EventModel{
+	string EventPayload = 1;
+	string AssemblyName = 2;
+}

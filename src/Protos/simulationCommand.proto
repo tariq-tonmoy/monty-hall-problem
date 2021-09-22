@@ -1,0 +1,14 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "MontyHallProblemSimulation.Application.Protos";
+
+import "google/protobuf/empty.proto";
+
+service ShipCommand {
+  rpc ApplyCommand (CommandModel) returns (google.protobuf.Empty);
+}
+
+message CommandModel{
+	string CommandPayload = 1;
+	string AssemblyName = 2;	
+}
