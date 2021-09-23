@@ -22,8 +22,6 @@ namespace SimulationAggregateRoot.UnitTest
         public static Guid CorrelationId = Guid.Parse("6f4b7449-60e1-4ac5-937d-49db0d55cb8d");
 
         public static Guid NewSimulationId = Guid.Parse("c7ede1e4-b41d-4a17-b6dd-27094937d000");
-        public static Guid DuplicateSimulationId = Guid.Parse("6f4b7449-60e1-4ac5-937d-49db0d55c000");
-        public static Guid CommonSimulationId = Guid.Parse("f0f6d39e-1e31-451f-8344-abe948255000");
 
         public static AggregateRoot.SimulationAggregateRoot CreateAggregateRootFromEventDto(SimulationEventDto dto, bool isMarkedToDelete)
         {
