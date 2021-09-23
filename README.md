@@ -24,3 +24,6 @@ To start using the client, please select the environment by selecting either Vis
 # Run Project:
 * *Docker*: Run docker-compose.yml file
 * *Visual Studio*: Run MontyHallProblemSimulation.sln file
+
+# Unit Tests:
+Unit tests are located in *test/SimulationAggregateRoot.UnitTest/SimulationAggregateRoot.UnitTest.csproj* project
