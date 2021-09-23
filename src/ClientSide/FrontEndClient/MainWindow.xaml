@@ -24,7 +24,7 @@
                             <ColumnDefinition Width="1.5*"></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <TextBlock Text="Environment" Grid.Column="0"/>
-                        <ComboBox Name="EnvSelector" Grid.Column="1" SelectedValue="{Binding Path=Environment}" SelectionChanged="EnvSelector_SelectionChanged">
+                        <ComboBox Name="EnvSelector" Grid.Column="1" SelectedValue="{Binding Path=Environment}" SelectionChanged="EnvSelector_SelectionChanged" Margin="0,0,8,0">
                             <ComboBoxItem Content="VisualStudio"></ComboBoxItem>
                             <ComboBoxItem Content="Docker"></ComboBoxItem>
                         </ComboBox>
@@ -44,7 +44,7 @@
                 <TextBlock Text="Enter number of simulations" Grid.Column="0" HorizontalAlignment="Right" Margin="0,0,4,0"/>
                 <TextBox Name="NumberOfSimulationTextBox" TextAlignment="Right" Grid.Column="1" Margin="4,0,0,0" Text="{Binding Path=NumberOfSimulations, BindsDirectlyToSource=True}"/>
                 <CheckBox Grid.Column="2" HorizontalAlignment="Right" Content="Chnage Door" IsChecked="{Binding Path=ChangeDoor, BindsDirectlyToSource=True}"/>
-                <Button x:Name="SimulateButton" Grid.Column="3" Width="50" Click="SimulateButton_Click" >Simulate</Button>
+                <Button x:Name="SimulateButton" Grid.Column="3" Width="50" Click="SimulateButton_Click" HorizontalAlignment="Right" Margin="0,0,8,0">Simulate</Button>
             </Grid>
 
         </Grid>

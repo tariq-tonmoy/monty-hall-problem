@@ -1,0 +1,27 @@
+FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
+WORKDIR /app
+
+COPY src/ ./
+
+RUN mkdir -p /root/.nuget/NuGet
+COPY ./config/NuGetPackageSource.Config /root/.nuget/NuGet/NuGet.Config
+
+RUN dotnet build CommandWebHost/CommandWebHost.csproj -o command-web
+
+FROM build AS publish
+WORKDIR /app
+
+RUN dotnet publish -c Release -o dist/command-web CommandWebHost/CommandWebHost.csproj
+
+
+FROM mcr.microsoft.com/dotnet/aspnet:5.0 AS base
+WORKDIR /app
+
+COPY --from=publish /app/dist ./
+EXPOSE 80
+
+HEALTHCHECK CMD curl --fail http://localhost:80/health || exit
+
+ENV ASPNETCORE_ENVIRONMENT Docker
+
+ENTRYPOINT ["dotnet", "command-web/MontyHallProblemSimulation.Application.CommandWebHost.dll"]

@@ -1,0 +1,67 @@
+version: '3'
+services:
+  command_web_host:
+    image: simulation/command_web_host
+    build:
+      context: .
+      dockerfile: Dockerfile-Web
+    container_name: command_web_host
+    networks:  
+      - simulation-net
+    ports:
+      - 127.0.0.40:8085:80
+  command_worker_host:
+    image: simulation/command_worker_host
+    build:
+      context: .
+      dockerfile: Dockerfile-Worker
+    container_name: command_worker_host
+    networks:  
+      - simulation-net
+    ports:
+      - 127.0.0.40:8086:80
+  event_worker_host:
+    image: simulation/event_worker_host
+    build:
+      context: .
+      dockerfile: Dockerfile-Event
+    container_name: event_worker_host
+    networks:  
+      - simulation-net
+    ports:
+      - 127.0.0.40:8087:80
+    volumes:
+      - type: volume
+        source: simulation-data-volume
+        target: /app/db/monty-hall-simulation
+  simulation_query_host:
+    image: simulation/simulation_query_host
+    build:
+      context: .
+      dockerfile: Dockerfile-SimulationQuery
+    container_name: simulation_query_host
+    networks:  
+      - simulation-net
+    ports:
+      - 127.0.0.40:8089:80
+    volumes:
+      - type: volume
+        source: simulation-data-volume
+        target: /app/db/monty-hall-simulation  
+  notification_host:
+    image: simulation/notification_host
+    build:
+      context: .
+      dockerfile: Dockerfile-Notification
+    container_name: notification_host
+    networks:  
+      - simulation-net
+    ports:
+      - 127.0.0.40:8090:80
+      - 127.0.0.40:8091:8080
+networks:
+  simulation-net:
+    driver: "bridge"
+volumes:
+  simulation-data-volume:
+
