@@ -71,6 +71,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FrontEndClient", "src\Clien
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ViewModel", "src\ClientSide\ViewModel\ViewModel.csproj", "{FD963751-745C-4414-8C40-19D653692EFF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimulationAggregateRoot.UnitTest", "test\SimulationAggregateRoot.UnitTest\SimulationAggregateRoot.UnitTest.csproj", "{032173AA-8CF3-4D96-8F11-EADA8EEB372A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -181,6 +183,10 @@ Global
 		{FD963751-745C-4414-8C40-19D653692EFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FD963751-745C-4414-8C40-19D653692EFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FD963751-745C-4414-8C40-19D653692EFF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{032173AA-8CF3-4D96-8F11-EADA8EEB372A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{032173AA-8CF3-4D96-8F11-EADA8EEB372A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{032173AA-8CF3-4D96-8F11-EADA8EEB372A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{032173AA-8CF3-4D96-8F11-EADA8EEB372A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
