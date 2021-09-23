@@ -2,6 +2,7 @@
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using Microsoft.Extensions.Logging;
+using System.Threading.Tasks;
 
 namespace MontyHallProblemSimulation.Infrastructure.Core.Service.Imps
 {
@@ -24,10 +25,13 @@ namespace MontyHallProblemSimulation.Infrastructure.Core.Service.Imps
         {
             try
             {
-                using (var scope = this.serviceScopeFactory.CreateScope())
-                {
-                    await base.HandleCommandReceivedEventAsync(command, scope);
-                }
+                await Task.Run(async () =>
+                                {
+                                    using (var scope = this.serviceScopeFactory.CreateScope())
+                                    {
+                                        await base.HandleCommandReceivedEventAsync(command, scope);
+                                    }
+                                });
             }
             catch (Exception ex)
             {

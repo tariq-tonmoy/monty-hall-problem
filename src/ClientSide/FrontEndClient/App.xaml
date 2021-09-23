@@ -1,9 +1,8 @@
 ﻿<Application x:Class="FrontEndClient.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:FrontEndClient"
-             StartupUri="MainWindow.xaml">
+             xmlns:local="clr-namespace:FrontEndClient">
     <Application.Resources>
-         
+
     </Application.Resources>
 </Application>
